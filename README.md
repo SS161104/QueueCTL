@@ -1,4 +1,4 @@
-# QueueCTL — Background Job Queue CLI (Node.js)
+# QueueCTL - Background Job Queue CLI
 
 QueueCTL is a simple yet powerful **background job queue system** built using Node.js.  
 It supports persistent job storage, multi-worker processing, exponential backoff retries,  
