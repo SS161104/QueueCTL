@@ -17,7 +17,7 @@ and a Dead Letter Queue (DLQ) for permanently failed jobs — all managed via a 
 
 ---
 
-## ⚙️ 1. Setup Instructions
+## 1. Setup Instructions
 
 ### **Clone the repository**
 ```bash
@@ -51,7 +51,7 @@ node bin/queuectl.js <command>
 
 ---
 
-## 💻 2. Usage Examples
+## 2. Usage Examples
 
 ### **Enqueue a job**
 ```bash
