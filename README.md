@@ -212,5 +212,18 @@ queuectl-node/
 └─ data/
    └─ queue.db             # Auto-created on first run
 ```
+---
+
+## Demo Video
+
+Watch the full working demo here:  
+https://drive.google.com/file/d/17OUZVdrV2ZcGy0XEf6H01AHT4jAO-0eA/view?usp=drive_link
+
+This video demonstrates:
+- Enqueuing jobs  
+- Running workers  
+- Automatic retries with exponential backoff  
+- Dead Letter Queue (DLQ) handling  
+- Retrying DLQ jobs via CLI  
 
 ---
