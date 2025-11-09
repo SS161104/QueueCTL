@@ -45,7 +45,7 @@ node ./bin/queuectl.js <command>
 
 ### **Enqueue a job**
 ```bash
-node ./bin/queuectl.js queuectl enqueue '{"command":"echo Hello QueueCTL"}'
+node ./bin/queuectl.js enqueue '{"command":"echo Hello QueueCTL"}'
 ```
 Output:
 ```
@@ -54,7 +54,7 @@ Enqueued job 1e2f9c10-8ab7-45be-9233-2b9a76c9f874
 
 ### **Start workers**
 ```bash
-node ./bin/queuectl.js queuectl worker start --count 2
+node ./bin/queuectl.js worker start --count 2
 ```
 Output:
 ```
@@ -66,12 +66,12 @@ Press `CTRL + C` to stop gracefully.
 
 ### **Stop workers**
 ```bash
-node ./bin/queuectl.js queuectl worker stop
+node ./bin/queuectl.js worker stop
 ```
 
 ### **View status**
 ```bash
-node ./bin/queuectl.js queuectl status
+node ./bin/queuectl.js status
 ```
 Output:
 ```
@@ -86,23 +86,23 @@ Output:
 
 ### **List jobs**
 ```bash
-node ./bin/queuectl.js queuectl list --state completed
+node ./bin/queuectl.js list --state completed
 ```
 
 ### **View DLQ**
 ```bash
-node ./bin/queuectl.js queuectl dlq list
+node ./bin/queuectl.js dlq list
 ```
 
 ### **Retry DLQ job**
 ```bash
-node ./bin/queuectl.js queuectl dlq retry <job-id>
+node ./bin/queuectl.js dlq retry <job-id>
 ```
 
 ### **Update config**
 ```bash
-node ./bin/queuectl.js queuectl config set max_retries 5
-node ./bin/queuectl.js queuectl config get max_retries
+node ./bin/queuectl.js config set max_retries 5
+node ./bin/queuectl.js config get max_retries
 ```
 
 ---
