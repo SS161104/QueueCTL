@@ -34,19 +34,9 @@ npm install
 ```bash
 chmod +x bin/queuectl.js
 ```
-
-### **(Optional) Link globally**
-```bash
-npm link
-```
-
 Now you can use:
 ```
-queuectl <command>
-```
-or without linking:
-```
-node bin/queuectl.js <command>
+node ./bin/queuectl.js <command>
 ```
 
 ---
@@ -55,7 +45,7 @@ node bin/queuectl.js <command>
 
 ### **Enqueue a job**
 ```bash
-queuectl enqueue '{"command":"echo Hello QueueCTL"}'
+node ./bin/queuectl.js queuectl enqueue '{"command":"echo Hello QueueCTL"}'
 ```
 Output:
 ```
@@ -64,7 +54,7 @@ Enqueued job 1e2f9c10-8ab7-45be-9233-2b9a76c9f874
 
 ### **Start workers**
 ```bash
-queuectl worker start --count 2
+node ./bin/queuectl.js queuectl worker start --count 2
 ```
 Output:
 ```
@@ -76,12 +66,12 @@ Press `CTRL + C` to stop gracefully.
 
 ### **Stop workers**
 ```bash
-queuectl worker stop
+node ./bin/queuectl.js queuectl worker stop
 ```
 
 ### **View status**
 ```bash
-queuectl status
+node ./bin/queuectl.js queuectl status
 ```
 Output:
 ```
@@ -96,23 +86,23 @@ Output:
 
 ### **List jobs**
 ```bash
-queuectl list --state completed
+node ./bin/queuectl.js queuectl list --state completed
 ```
 
 ### **View DLQ**
 ```bash
-queuectl dlq list
+node ./bin/queuectl.js queuectl dlq list
 ```
 
 ### **Retry DLQ job**
 ```bash
-queuectl dlq retry <job-id>
+node ./bin/queuectl.js queuectl dlq retry <job-id>
 ```
 
 ### **Update config**
 ```bash
-queuectl config set max_retries 5
-queuectl config get max_retries
+node ./bin/queuectl.js queuectl config set max_retries 5
+node ./bin/queuectl.js queuectl config get max_retries
 ```
 
 ---
