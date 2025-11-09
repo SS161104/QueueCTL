@@ -1,0 +1,20 @@
+{
+  "name": "queuectl-node",
+  "version": "1.0.0",
+  "description": "CLI based background job queue system for internship assignment",
+  "main": "bin/queuectl.js",
+  "bin": {
+    "queuectl": "./bin/queuectl.js"
+  },
+  "scripts": {
+    "start": "node ./bin/queuectl.js",
+    "test": "bash ./tests/quick-test.sh"
+  },
+  "author": "you",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^8.0.0",
+    "commander": "^10.0.0",
+    "uuid": "^9.0.0"
+  }
+}
