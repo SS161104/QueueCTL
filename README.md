@@ -187,11 +187,11 @@ Enqueued job job-fail
 
 | Test Case | Command |
 |------------|----------|
-| Simple success | `queuectl enqueue '{"command":"echo hi"}'` |
-| Failure & retry | `queuectl enqueue '{"command":"bash -c \"exit 1\""}'` |
+| Simple success | `node ./bin/queuectl.js enqueue '{"command":"echo hi"}'` |
+| Failure & retry | `node ./bin/queuectl.js enqueue '{"command":"bash -c \"exit 1\""}'` |
 | Persistence | Restart worker; jobs remain pending |
-| DLQ Retry | `queuectl dlq retry <job-id>` |
-| Multi-worker | `queuectl worker start --count 3` |
+| DLQ Retry | `node ./bin/queuectl.js dlq retry <job-id>` |
+| Multi-worker | `node ./bin/queuectl.js worker start --count 3` |
 
 ---
 
